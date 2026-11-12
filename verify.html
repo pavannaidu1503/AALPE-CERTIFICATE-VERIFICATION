@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification | AALPE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <!-- Logo -->
+            <img src="images/logo.png" class="logo" alt="AALPE Logo">
+
+            <h1>Certificate Verification</h1>
+
+            <!-- Loading -->
+            <div id="loading">
+                <i class="fas fa-spinner fa-spin fa-2x"></i>
+                <p>Verifying Certificate...</p>
+            </div>
+
+            <!-- Success Result -->
+            <div id="certificateResult" style="display:none;">
+
+                <div class="status verified">
+                    <i class="fas fa-circle-check"></i>
+                    Certificate Verified
+                </div>
+
+                <table class="details-table">
+
+                    <tr>
+                        <th>Certificate ID</th>
+                        <td id="certificate_id"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Student Name</th>
+                        <td id="student_name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>College Name</th>
+                        <td id="college_name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Branch Name</th>
+                        <td id="branch_name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Domain</th>
+                        <td id="domain"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Duration</th>
+                        <td id="duration"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Issue Date</th>
+                        <td id="issue_date"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <!-- Certificate Not Found -->
+            <div id="notFound" style="display:none;">
+
+                <div class="status invalid">
+                    <i class="fas fa-circle-xmark"></i>
+                    Certificate Not Found
+                </div>
+
+                <p style="text-align:center;">
+                    The entered Certificate ID is invalid or does not exist.
+                </p>
+
+            </div>
+
+            <div style="text-align:center; margin-top:25px;">
+
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Verify Another Certificate
+                </a>
+
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 AALPE | All Rights Reserved.
+        </footer>
+
+    </div>
+
+    <!-- API URL -->
+    <script src="js/config.js"></script>
+
+    <!-- Verification Logic -->
+    <script src="js/verify.js"></script>
+
+</body>
+
+</html>
